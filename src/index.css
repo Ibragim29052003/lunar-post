@@ -1,0 +1,63 @@
+:root {
+  color: #282a25;
+  background: #eeece3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --paper: #eeece3;
+  --ink: #282a25;
+  --red: #ad3824;
+  --lcd: #c5ccaa;
+  --lcd-ink: #343f2a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+button,
+kbd {
+  -webkit-user-select: none;
+  user-select: none;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #b24129;
+  outline-offset: 5px;
+}
+button:disabled {
+  opacity: 0.55;
+}
+a {
+  color: inherit;
+}
+svg {
+  flex-shrink: 0;
+}
+::selection {
+  background: #cf684640;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

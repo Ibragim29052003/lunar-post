@@ -1,0 +1,1397 @@
+@mono: 'Courier New', Courier, monospace;
+
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 54px;
+}
+.header {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #31372c2b;
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.edition {
+  font-family: @mono;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #5c6251;
+  span {
+    margin: 0 12px;
+    color: #b7b7aa;
+  }
+}
+.helpButton {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0 12px 16px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  &:hover {
+    color: var(--red);
+  }
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 0 34px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 17px;
+  font-family: @mono;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.redDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+.intro h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(48px, 6.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -4.5px;
+  margin: 0 0 18px;
+  span {
+    color: var(--red);
+  }
+}
+.description {
+  color: #5c6251;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+.stamp {
+  color: #a7503a;
+  width: 132px;
+  height: 132px;
+  border: 1px solid #ab584c70;
+  outline: 1px solid #ab584c33;
+  outline-offset: -7px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  font-family: @mono;
+  font-size: 8px;
+  letter-spacing: 1px;
+  transform: rotate(12deg);
+  margin-right: 24px;
+}
+.device {
+  max-width: 980px;
+  margin-inline: auto;
+  position: relative;
+  isolation: isolate;
+  border: 7px solid #b7452c;
+  border-bottom-width: 12px;
+  border-radius: 29px;
+  padding: 23px 30px 30px;
+  background: linear-gradient(110deg, #f2efe3, #e6e2d5);
+  box-shadow:
+    inset 0 2px 3px #ffffffd9,
+    inset 0 -3px 4px #b0a89c,
+    0 3px 0 #753221,
+    0 15px 15px -12px #32281880,
+    0 32px 54px -26px #40362c66;
+  scroll-margin-block: 12px;
+}
+.device::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #4c493321;
+  border-radius: 14px;
+  z-index: -1;
+}
+.screw {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #aba89a, #ddd7c8);
+  box-shadow:
+    inset 0 1px 2px #4c483e80,
+    0 1px 0 #fff9;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    background: #827e70;
+    top: 4px;
+    left: 1px;
+    transform: rotate(-35deg);
+  }
+}
+.screwTL {
+  top: 12px;
+  left: 12px;
+}
+.screwTR {
+  top: 12px;
+  right: 12px;
+}
+.screwBL {
+  bottom: 12px;
+  left: 12px;
+}
+.screwBR {
+  bottom: 12px;
+  right: 12px;
+}
+.deviceTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+}
+.model {
+  font: 9px @mono;
+  letter-spacing: 1.5px;
+  color: #5c6251;
+  span {
+    color: var(--red);
+    margin: 0 7px;
+  }
+}
+.deviceBody {
+  display: grid;
+  grid-template-columns: 97px minmax(0, 1fr) 97px;
+  gap: 18px;
+  align-items: stretch;
+}
+.controlColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0 1px;
+}
+.directionControl {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+  kbd {
+    background: #d8d6c955;
+    border: 1px solid #b2b0a1;
+    border-radius: 3px;
+    color: #5c6251;
+    width: 20px;
+    height: 20px;
+    font: 10px/19px @mono;
+    text-align: center;
+  }
+}
+.sectorLabel {
+  font: 8px @mono;
+  letter-spacing: 1px;
+  color: #5c6251;
+}
+.directionButton {
+  width: 66px;
+  height: 66px;
+  border: 5px solid #b7472e;
+  outline: 1px solid #9f422e;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 3px 2px #ffffff80,
+    inset 0 -4px 2px #282d2d66,
+    0 3px 2px #b2ab9c;
+  background: linear-gradient(#777e79, #4b5350);
+  color: #e6e6d8;
+  transition:
+    transform 100ms,
+    box-shadow 100ms;
+  display: grid;
+  place-items: center;
+  touch-action: manipulation;
+  span {
+    font-size: 36px;
+    line-height: 1;
+    margin-top: -3px;
+  }
+  &:disabled {
+    opacity: 1;
+  }
+  &:not(:disabled):hover {
+    background: linear-gradient(#858d85, #535c54);
+  }
+  &:not(:disabled):active,
+  &.pressed {
+    transform: translateY(2px);
+    box-shadow:
+      inset 0 3px 6px #1a211cb3,
+      0 1px 1px #b2ab9c;
+    color: #fff6dc;
+  }
+}
+.screenFrame {
+  border-radius: 17px;
+  background: #333b37;
+  border: 1px solid #232a24;
+  padding: 10px;
+  box-shadow:
+    0 2px 2px #fff9,
+    inset 0 2px 5px #0009,
+    0 0 0 5px #cec8b8,
+    0 0 0 6px #b8b3a4;
+}
+.lcd {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: var(--lcd);
+  color: var(--lcd-ink);
+  box-shadow: inset 0 3px 12px #2d372c55;
+  font-family: @mono;
+}
+.lcd::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(0deg, #1f2b1a05 0, #1f2b1a05 1px, transparent 1px, transparent 3px),
+    linear-gradient(135deg, #eef2d226, transparent 60%);
+}
+.scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin: 0 23px;
+  padding: 18px 0 10px;
+  border-bottom: 1px solid #3b493134;
+}
+.lcdLabel {
+  display: block;
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.score {
+  display: block;
+  width: 112px;
+  height: 42px;
+  font: 42px/0.95 @mono;
+  font-weight: 600;
+  letter-spacing: -3px;
+  text-shadow: 1px 2px 0 #29301b18;
+}
+.record {
+  align-self: flex-end;
+  padding-bottom: 2px;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+.recordDigits {
+  display: block;
+  width: 72px;
+  height: 24px;
+}
+.attempts {
+  margin-left: auto;
+  align-self: flex-end;
+  padding-bottom: 2px;
+  > div {
+    display: flex;
+    gap: 3px;
+  }
+}
+.lostLife {
+  opacity: 0.14;
+}
+.field {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+}
+.scene {
+  width: 100%;
+}
+.sceneIdle {
+  opacity: 0.25;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px;
+  text-align: center;
+  background: radial-gradient(ellipse at center, #c5ccaa 5%, #c5ccaae8 40%, #c5ccaa00 80%);
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    margin: 0 0 12px;
+  }
+  p {
+    font: 11px/1.65 @mono;
+    margin: 0 0 18px;
+  }
+}
+.overlayEyebrow {
+  font: 8px @mono;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.overlayIcon {
+  margin: 0 0 13px;
+  height: 38px;
+}
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #37432a;
+  border-radius: 3px;
+  color: var(--lcd);
+  background: var(--lcd-ink);
+  padding: 12px 18px;
+  box-shadow: 0 3px 0 #34402933;
+  font: bold 11px @mono;
+  letter-spacing: 1px;
+  z-index: 1;
+  &:hover {
+    background: #222e1b;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+.spaceHint {
+  display: block;
+  font: 8px @mono;
+  margin-top: 12px;
+  opacity: 0.9;
+}
+.finalScore {
+  display: block;
+  width: 160px;
+  height: 48px;
+  font: 42px/1 @mono;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
+}
+.telemetry {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  padding: 10px 0 12px;
+  margin: 0 23px;
+  border-top: 1px solid #3b493134;
+}
+.signal {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+.missed {
+  animation: miss 220ms ease-out;
+}
+@keyframes miss {
+  50% {
+    filter: brightness(0.9);
+  }
+}
+.catchPoints {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  animation: catch 550ms ease-out forwards;
+}
+@keyframes catch {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}
+.deviceBottom {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 170px;
+  align-items: center;
+  padding: 24px 6px 0;
+  gap: 12px;
+}
+.deviceTitle {
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-size: 22px;
+  span {
+    display: block;
+    font: 7px @mono;
+    letter-spacing: 2.3px;
+    color: #5c6251;
+    margin-top: 6px;
+  }
+}
+.modeSwitch {
+  display: flex;
+  gap: 16px;
+  button {
+    font-size: 9px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+    padding: 0;
+    background: none;
+    text-transform: uppercase;
+    color: #5c6251;
+    i {
+      height: 13px;
+      width: 31px;
+      border: 2px solid #9b988a;
+      border-radius: 7px;
+      background: #b5b6a8;
+      box-shadow: inset 0 1px 2px #434d3f66;
+    }
+    &[aria-pressed='true'] {
+      color: var(--red);
+      i {
+        border-color: #a94d35;
+        background: #c95a3f;
+      }
+    }
+    &:disabled {
+      opacity: 1;
+    }
+  }
+}
+.utilityButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  button {
+    background: #d2d0c2;
+    border: 1px solid #b7b3a3;
+    box-shadow:
+      inset 0 1px 1px #fffc,
+      0 2px 1px #b5b0a0;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    &:hover:not(:disabled) {
+      background: #e4e0d3;
+    }
+  }
+}
+.speaker {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 18px;
+  i {
+    width: 3px;
+    height: 10px;
+    background: #97998a;
+    border-radius: 2px;
+    box-shadow: 1px 0 0 #fff8;
+  }
+}
+.belowDevice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 28px 7px 0;
+  color: #5c6251;
+  font: 10px @mono;
+  > span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.keyGroup {
+  display: flex;
+  gap: 3px;
+  kbd {
+    border: 1px solid #b9bbad;
+    color: #5c6251;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    font: 9px @mono;
+    background: #e5e5db;
+  }
+}
+.touchHint {
+  display: none !important;
+}
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 51px;
+  padding: 25px 0 31px;
+  border-top: 1px solid #31372c2b;
+  gap: 24px;
+  > div > span {
+    color: #a84a34;
+    font: 9px @mono;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 10px 0 0;
+    color: #5c6251;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #31372c2b;
+  padding: 24px 0 29px;
+  color: #5c6251;
+  font: 9px @mono;
+  > span:last-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+  }
+}
+.routeLine {
+  color: #b7b9aa;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.dialog {
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid #adae9e;
+  border-radius: 8px;
+  padding: 27px 30px 30px;
+  max-width: 520px;
+  width: calc(100% - 32px);
+  max-height: calc(100dvh - 40px);
+  box-shadow: 0 20px 100px #131c1559;
+  &::backdrop {
+    background: #252a2266;
+    backdrop-filter: blur(4px);
+  }
+  h2 {
+    font:
+      36px/1.1 Georgia,
+      serif;
+    letter-spacing: -1px;
+    margin: 20px 0;
+  }
+  p,
+  li {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  kbd {
+    font-family: @mono;
+  }
+}
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .eyebrow {
+    margin-bottom: 0;
+    font-size: 9px;
+  }
+}
+.iconButton {
+  border: none;
+  background: none;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+}
+.helpKeys {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 130px;
+  margin: 22px auto;
+  kbd {
+    border: 1px solid #b1b4a4;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+.helpNote {
+  color: #5c6251;
+}
+.primaryButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: var(--red);
+  padding: 15px 18px;
+  color: #fff4e2;
+  margin-top: 24px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+@media (min-width: 1350px) {
+  .intro {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .page {
+    padding: 0 30px;
+  }
+  .device {
+    padding: 22px 20px 23px;
+  }
+  .deviceBody {
+    grid-template-columns: 74px minmax(0, 1fr) 74px;
+    gap: 14px;
+  }
+  .deviceBottom {
+    grid-template-columns: 130px minmax(0, 1fr) 130px;
+  }
+  .deviceTitle {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .deviceTitle span {
+    font-size: 6px;
+    letter-spacing: 1.7px;
+  }
+  .scoreboard {
+    gap: 15px;
+  }
+  .score {
+    font-size: 35px;
+  }
+  .record {
+    font-size: 17px;
+  }
+  .field {
+    min-height: 244px;
+  }
+  .overlayIcon {
+    display: none;
+  }
+  .overlayEyebrow {
+    margin-bottom: 14px;
+  }
+  .overlay p {
+    margin-bottom: 14px;
+  }
+  .telemetry {
+    font-size: 7px;
+    margin: 0 16px;
+  }
+  .scoreboard {
+    margin: 0 16px;
+  }
+  .sectorLabel {
+    font-size: 7px;
+  }
+  .directionButton {
+    width: 59px;
+    height: 59px;
+  }
+  .belowDevice {
+    font-size: 9px;
+  }
+  .stamp {
+    width: 115px;
+    height: 115px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 720px) {
+  .page {
+    padding: 0 18px;
+  }
+  .header {
+    height: 78px;
+  }
+  .edition {
+    display: none;
+  }
+  .wordmark {
+    font-size: 9px;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+  .helpButton {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .intro {
+    padding: 30px 0 29px;
+  }
+  .intro h1 {
+    font-size: 52px;
+    letter-spacing: -2.5px;
+    margin-bottom: 13px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .stamp {
+    width: 88px;
+    height: 88px;
+    font-size: 6px;
+    letter-spacing: 0.1px;
+    gap: 6px;
+    margin-left: 10px;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .device {
+    border-width: 5px;
+    border-bottom-width: 9px;
+    border-radius: 21px;
+    padding: 22px 14px 20px;
+  }
+  .deviceTop {
+    padding: 0 3px 20px;
+  }
+  .brand {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    gap: 7px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .model {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+    span {
+      margin: 0 3px;
+    }
+  }
+  .deviceBody {
+    grid-template-columns: 1fr 1fr;
+    gap: 21px 14px;
+  }
+  .screenFrame {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    padding: 8px;
+    border-radius: 11px;
+  }
+  .controlColumn {
+    grid-row: 2;
+    flex-direction: row;
+    padding: 0;
+    gap: 9px;
+  }
+  .controlColumn:last-child {
+    flex-direction: row-reverse;
+  }
+  .sectorLabel {
+    display: none;
+  }
+  .directionControl {
+    gap: 8px;
+  }
+  .directionButton {
+    width: 57px;
+    height: 57px;
+    border-width: 4px;
+    span {
+      font-size: 30px;
+    }
+  }
+  .directionControl kbd {
+    border: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    font-size: 8px;
+  }
+  .field {
+    min-height: 0;
+    aspect-ratio: 600 / 340;
+  }
+  .overlay {
+    padding: 10px;
+  }
+  .overlay h2 {
+    font-size: 27px;
+  }
+  .overlay p {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+  .overlayEyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+  }
+  .startButton {
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+  .spaceHint {
+    font-size: 7px;
+    margin-top: 10px;
+  }
+  .scoreboard {
+    padding-top: 15px;
+    padding-bottom: 9px;
+    margin: 0 15px;
+    gap: 18px;
+  }
+  .score {
+    font-size: 35px;
+  }
+  .lcdLabel {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .record {
+    font-size: 17px;
+  }
+  .attempts {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .telemetry {
+    margin: 0 15px;
+    padding: 8px 0 10px;
+    font-size: 7px;
+    letter-spacing: 0;
+  }
+  .deviceBottom {
+    padding: 20px 0 0;
+    grid-template-columns: 1fr auto;
+    gap: 18px 10px;
+  }
+  .deviceTitle {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .deviceTitle span {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+  .modeSwitch {
+    gap: 20px;
+    padding-left: 5px;
+    button {
+      flex-direction: row;
+      font-size: 8px;
+      gap: 6px;
+      i {
+        width: 23px;
+        height: 12px;
+      }
+    }
+  }
+  .utilityButtons {
+    padding-right: 5px;
+  }
+  .speaker {
+    margin-top: 0;
+    position: absolute;
+    bottom: 28px;
+    left: 48%;
+    gap: 3px;
+    i {
+      height: 8px;
+      width: 2px;
+    }
+  }
+  .belowDevice {
+    margin: 21px 0 0;
+    font-size: 9px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .belowDevice > span:first-child {
+    gap: 6px;
+  }
+  .keyGroup {
+    gap: 2px;
+    kbd {
+      width: 17px;
+      height: 18px;
+      font-size: 8px;
+    }
+  }
+  .rules {
+    margin-top: 32px;
+    padding: 22px 0 25px;
+    gap: 16px;
+    > div > span {
+      font-size: 7px;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 11px;
+      line-height: 1.6;
+    }
+  }
+  .footer {
+    font-size: 8px;
+    padding-top: 19px;
+    gap: 20px;
+    line-height: 1.6;
+  }
+  .footer > span:last-child {
+    white-space: nowrap;
+    font-size: 7px;
+    gap: 3px;
+  }
+  .routeLine {
+    display: none;
+  }
+  .screwTL,
+  .screwTR {
+    top: 10px;
+  }
+  .screwTL,
+  .screwBL {
+    left: 9px;
+  }
+  .screwTR,
+  .screwBR {
+    right: 9px;
+  }
+  .screw {
+    width: 7px;
+    height: 7px;
+    &::after {
+      width: 5px;
+      top: 3px;
+    }
+  }
+  .finalScore {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .page {
+    padding: 0 12px;
+  }
+  .intro h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+  .stamp {
+    display: none;
+  }
+  .device {
+    padding: 19px 11px 18px;
+  }
+  .model {
+    font-size: 6px;
+  }
+  .brand {
+    letter-spacing: 1px;
+  }
+  .overlay h2 {
+    font-size: 23px;
+    margin-bottom: 9px;
+  }
+  .overlay p {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+  .overlayEyebrow {
+    margin-bottom: 11px;
+    font-size: 6px;
+  }
+  .spaceHint {
+    margin-top: 8px;
+  }
+  .startButton {
+    padding: 10px 12px;
+    font-size: 9px;
+  }
+  .telemetry {
+    font-size: 6px;
+  }
+  .scoreboard {
+    gap: 13px;
+  }
+  .record {
+    font-size: 15px;
+  }
+  .score {
+    font-size: 30px;
+  }
+  .attempts svg {
+    width: 16px;
+    height: 16px;
+  }
+  .rules {
+    gap: 12px;
+    > div > span {
+      font-size: 6px;
+      letter-spacing: 0.3px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  .speaker {
+    display: none;
+  }
+  .belowDevice > span:last-child {
+    display: none;
+  }
+  .finalScore {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+}
+@media (pointer: coarse) {
+  .belowDevice > span:first-child {
+    display: none;
+  }
+  .touchHint {
+    display: flex !important;
+  }
+}
+
+.storageNote {
+  margin: 16px 7px 0;
+  color: #6a4430;
+  font: 12px/1.5 @mono;
+}
+
+@media (min-width: 721px) {
+  .device {
+    // Let the browser evaluate viewport units. Less would reduce min() to 980px.
+    max-width: ~'min(980px, calc((100svh - 396px) * 1.765 + 326px))';
+  }
+  .modeSwitch button {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+}
+@media (max-width: 720px) {
+  .device {
+    max-width: none;
+  }
+  .scoreboard {
+    gap: 12px;
+  }
+  .score {
+    width: 76px;
+    height: 34px;
+  }
+  .recordDigits {
+    width: 58px;
+    height: 21px;
+  }
+  .field,
+  .scene svg {
+    min-height: 220px;
+  }
+  .field {
+    aspect-ratio: auto;
+  }
+  .finalScore {
+    width: 132px;
+    height: 38px;
+    margin-bottom: 8px;
+  }
+  .overlay h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .overlay p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .overlayEyebrow {
+    font-size: 7px;
+    margin-bottom: 8px;
+  }
+  .speaker {
+    display: none;
+  }
+  .modeSwitch button {
+    min-height: 44px;
+  }
+  .iconButton {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+@media (max-width: 720px) and (max-height: 680px) {
+  .device {
+    padding: 10px 11px 12px;
+  }
+  .deviceTop {
+    padding-bottom: 10px;
+  }
+  .deviceBody {
+    gap: 10px;
+  }
+  .directionButton {
+    width: 50px;
+    height: 50px;
+  }
+  .directionControl kbd {
+    display: none;
+  }
+  .deviceBottom {
+    padding-top: 12px;
+    row-gap: 6px;
+  }
+  .deviceTitle {
+    font-size: 18px;
+  }
+}
+@media (min-width: 480px) and (max-height: 520px) {
+  .device {
+    max-width: 740px;
+    padding: 12px 18px 14px;
+    border-width: 5px;
+  }
+  .deviceTop {
+    padding-bottom: 9px;
+    height: 30px;
+  }
+  .brand {
+    font-size: 11px;
+  }
+  .deviceBody {
+    grid-template-columns: 60px minmax(0, 1fr) 60px;
+    gap: 12px;
+  }
+  .screenFrame {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .controlColumn,
+  .controlColumn:last-child {
+    grid-row: auto;
+    flex-direction: column;
+  }
+  .deviceTitle {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .directionButton {
+    width: 48px;
+    height: 48px;
+  }
+  .directionControl kbd,
+  .speaker {
+    display: none;
+  }
+  .screenFrame {
+    padding: 6px;
+  }
+  .scoreboard {
+    padding: 8px 0 6px;
+  }
+  .score {
+    height: 28px;
+    width: 85px;
+  }
+  .recordDigits {
+    height: 19px;
+    width: 60px;
+  }
+  .field {
+    min-height: 160px;
+    height: calc(100svh - 222px);
+  }
+  .scene svg {
+    min-height: 0;
+  }
+  .scene,
+  .scene svg {
+    height: 100%;
+  }
+  .telemetry {
+    padding: 6px 0 8px;
+  }
+  .deviceBottom {
+    padding-top: 10px;
+    grid-template-columns: 130px minmax(0, 1fr) 130px;
+  }
+  .deviceTitle {
+    font-size: 16px;
+  }
+  .deviceTitle span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .overlayIcon,
+  .overlayEyebrow,
+  .spaceHint {
+    display: none;
+  }
+  .overlay h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .overlay p {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .finalScore {
+    height: 30px;
+    margin-bottom: 6px;
+  }
+  .startButton {
+    padding: 9px 12px;
+  }
+}
+@media (min-width: 480px) and (max-height: 360px) {
+  .device {
+    padding: 10px 12px;
+  }
+  .deviceTop,
+  .deviceTitle {
+    display: none;
+  }
+  .deviceBottom {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 6px;
+  }
+  .field {
+    min-height: 130px;
+    height: calc(100svh - 190px);
+  }
+  .overlay {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: center;
+    gap: 5px 8px;
+    padding: 8px 12px;
+  }
+  .overlay h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 19px;
+    margin: 0;
+  }
+  .finalScore {
+    grid-column: 1;
+    grid-row: 2;
+    width: 96px;
+    height: 25px;
+    margin: 0 auto;
+  }
+  .overlay p {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 9px;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .startButton {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: center;
+    font-size: 9px;
+    padding: 10px;
+  }
+}
